@@ -1,0 +1,80 @@
+.main-container {
+    margin-left: 18%;
+    margin-right: 18%;
+
+}
+
+.mat-toolbar {
+    background: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-card {
+    background-color: #f5f2f7;
+    color: black;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.mat-card-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.mat-card-content {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mat-form-field {
+    color: black;
+}
+
+
+.mat-expansion-panel-header {
+    background-color: #7b1fa2;
+    // background-color: #f5f2f7;
+}
+
+.mat-expansion-panel-content {
+    padding-top: 5px;
+    background-color: #f5f2f7;
+    color: #7b1fa2;
+    .mat-expansion-panel-body {
+        background-color: #f5f2f7;
+        color: #7b1fa2;
+    }
+}
+
+.example-action-buttons {
+    margin-top: 10px;
+    padding-top: 10px;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-raised-button {
+    margin-right: 10px;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-headers-align .mat-mdc-form-field+.mat-mdc-form-field {
+    margin-left: 8px;
+}

@@ -1,0 +1,40 @@
+<div class="main-container">
+    <form [formGroup]="form">
+        <br>
+        <mat-card>
+            <mat-card-title>Upload your solidity file</mat-card-title>
+            <mat-card-content>
+                <mat-toolbar appearance="outline">
+                    <input formControlName="solidityFileForm" type="file" accept=".sol" (change)="chooseFile($event)"
+                        multiple>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="parseFile()">Upload File</button>
+                    </mat-card-actions>
+                </mat-toolbar>
+            </mat-card-content>
+        </mat-card>
+        <br>
+        <mat-card *ngIf="result">
+            <mat-card-title>Linting Results</mat-card-title>
+            <mat-card-content>
+                <div class="example-action-buttons">
+                    <button mat-raised-button color="primary" (click)="accordion.openAll()">Expand All</button>
+                    <button mat-raised-button color="primary" (click)="accordion.closeAll()">Collapse All</button>
+                </div>
+                
+                <mat-accordion class="example-headers-align" multi>
+                    <mat-expansion-panel *ngFor="let res of result">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{res.contractName}}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div  *ngFor="let errRes of res.errorResponse">
+                            <p> {{errRes}} </p>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>
